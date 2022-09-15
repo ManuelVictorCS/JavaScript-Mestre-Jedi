@@ -1,0 +1,98 @@
+ANOTAÇÕES
+
+Aula 8
+
+ir para uma pasta no cmd: cd (endereço da pasta)
+criar uma pasta no cmd: ir no local desejado e usar o comando mkdir + o nome da pasta
+abrir a pasta no vscode: ir no local desejado e usar o comando code .
+linkar a página html com o javascript: Criar o arquivo js na mesma apsta q o arquivo html e usar o código: <script>src="./nome do arquivo"</script> 
+linkar com um link jquerry (exemplo): <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+Inserir um texto pelo JavaScrit:    <script>$('#pCurso').append("Formação JavaScript Mestre Jedi")</script> 
+
+Aula 7
+
+declarar uma variavel js: colocar o tipo de variavel, o nome da variavel e seu conteúdo, exemplo: var nome = "Manuel"
+comando para aparecer uma mensagem js no terminal da página: console.log("mensagem");
+
+------------------------------------------------------------------PROGRAMAÇÃO FUNCIONAL------------------------------------------------------------------
+
+comando para abrir uma função js:  function nomeDaFuncao(){
+    //comando que a função deverá executar// console.log("exibir nome: " + nome);
+}
+
+comando para chamar a função no programa: nomeDaFuncao();
+
+Aula 8
+
+Onload -> executar uma função javascript após o carregamente total da página html. Comando: //dentro da tag body// <body onload="nomeDaFuncao()">
+
+Aula 9
+
+Como colocar um botão na página web -. Dentro do body, abrir a tag <button>, com a função "onclick" e colocar a função javascript que deverá ser executada. Exemplo: <button onclick="eventoClick()">Exibir alert (mensagem que ficará no botão)</button>
+
+
+------------------------------------------------------------------PROGRAMAÇÃO POO (ORIENTADA A OBJETO)------------------------------------------------------------------
+
+Aula 12
+
+POO é programação orientada a objetos que é basicamente, funções que são executadas a partir de objetos criados pelo programador.
+Um objeto é uma variável com atributos, exemplo:
+varObjManuel = {
+nome: "Manuel Victor",
+idade: "20",
+altura: "1,90",
+};
+
+Todo objeto pode ter métodos, que são as funções específicas do objeto, como por exemplo: 
+
+var objManuel = {
+nome: "Manuel Victor",
+idade: "20",
+altura: "1,90",
+estudandoJavaScript: function(){
+	console.log("Uma função dentro do meu objeto");
+	}
+};
+
+Para puxar todos os atributos do objeto no terminal, basta usar o comando: console.log(objManuel);	
+Para puxar um atributo específico do objeto no terminal, basta usar o comando: console.log(objManuel.nome //ou quelauqer outro atributo desejado// );
+Para executar o método do objeto no terminal, basta usar o comando: objManuel.estudandoJavaScript();
+
+
+------------------------------------------------------------------PROGRAMAÇÃO SINCRONA------------------------------------------------------------------
+
+Aula 12
+
+Programação sincrona, é quando o programa irá executar na ordem, todas as linhas do código. da primeira até a última. 
+Exemplo:
+
+var curso = "Formação JavaScript Mestre Jedi";
+
+console.log("Ola seja bem vindo ao curso: " + curso);
+
+for (let index = 0; index < 10; index++){
+    console.log(index);
+}
+
+console.log("Este curso é 10!! :)");
+
+Primeiro, o programa irá imprimir "Ola seja bem vindo ao curso: Formação JavaScript Mestre Jedi", depois, irá imprimir todos os números do 0 ao 9. 
+
+------------------------------------------------------------------PROGRAMAÇÃO ASSINCRONA------------------------------------------------------------------
+
+Aula 13
+
+Programação assincrona, é quando o programa irá executar algumas linhas de código antes de outras. Não seguirá a ordem das linhas de código durante o funcionamento do programa.
+Exemplo: 
+
+console.log("inicio programação sincrona.");
+
+//função timer programação assincrona
+setTimeout(function(){
+    console.log("Executando programação assincrona. ");
+}, 2000);
+
+console.log("termino programação sincrona. ");
+
+Primeiro, o programa irá imprimir "inicio programação sincrona.". Teoricamente, logo após isso, ele iria executar a função em seguida, porém, como ela é um setTimeout de 2000 milésimos (2 segundos), ela irá ser executada somente depois de 2 segundos e, enquanto isso, o programa irá rodar as outras linhas de código restantes.
+Então ele irá imprimir "termino programação sincrona. " e depois "Executando programação assincrona. "
